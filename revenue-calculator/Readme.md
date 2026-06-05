@@ -7,8 +7,8 @@ Applies a **10% discount** for `PREMIUM` customers and ignores invalid entries (
 
 ## Requirements
 
-| Java | 8 or above |
-| Build tool | None required -- plain `javac` |
+Java 8 or above, 
+Build tool - None required -- plain `javac`
 
 
 ## How to Run
@@ -38,10 +38,8 @@ The project includes JUnit 5 tests (`MonthlyRevenueCalculatorTest`) run via Mave
 
 ### Requirements
 
-| Tool | Version |
-|---|---|
-| JDK | 21 (matches `maven.compiler.target` in `pom.xml`) |
-| Maven | 3.6+ |
+- **JDK 21**
+- **Maven 3.6+**
 
 JUnit 5 (`junit-jupiter` 5.10.2) is declared in `pom.xml` and downloaded automatically by Maven.
 

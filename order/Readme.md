@@ -5,15 +5,12 @@ A RESTful API that manages orders.
 ---
 
 ## Tech Stack
-
-| Layer | Choice |
-|---|---|
-| Framework | Spring Boot 3.2 |
-| Language | Java 17 |
-| Build | Maven |
-| Validation | Jakarta Bean Validation (`spring-boot-starter-validation`) |
-| Storage | In-memory (`ConcurrentHashMap`) |
-| Testing | JUnit 5 + Mockito + AssertJ |
+- **Framework:** Spring Boot 3.2
+- **Language:** Java 17
+- **Build:** Maven
+- **Validation:** Jakarta Bean Validation (spring-boot-starter-validation)
+- **Storage:** In-memory (ConcurrentHashMap)
+- **Testing:** JUnit 5 + Mockito
 
 ---
 
@@ -148,14 +145,12 @@ All errors return a consistent JSON envelope:
 }
 ```
 
-| Scenario | HTTP Status |
-|---|---|
-| Validation failure | 400 Bad Request |
-| Malformed JSON / bad enum | 400 Bad Request |
-| Invalid `?month` format | 400 Bad Request |
-| Missing `?month` param | 400 Bad Request |
-| Order not found by ID | 404 Not Found |
-| Unexpected error | 500 Internal Server Error |
+## Scenario HTTP Status
+**Validation failure:**  400 Bad Request\
+**Malformed JSON / bad enum:**  400 Bad Request\
+**Invalid `?month` format:**  400 Bad Request\
+**Order not found by ID :**  404 Not Found\
+**Unexpected error :**  500 Internal Server Error
 
 ---
 
