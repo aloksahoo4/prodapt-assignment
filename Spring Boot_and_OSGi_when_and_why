@@ -1,0 +1,19 @@
+Spring Boot -- when and why
+==========================
+
+1. Spring Boot follows a monolithic classloader -- the entire application shares one classpath. When you update a library, you redeploy everything. This is perfectly fine for 95% of applications, especially when paired with CI/CD and rolling deployments.
+
+Spring Boot is the default choice for most backend applications. You pick it when you want fast development velocity with convention-over-configuration, a mature ecosystem (Spring Data, Security, Cloud), embedded server deployment as a single JAR, and straightforward microservices architecture. 
+
+OSGi
+====
+1.OSGi is a modular runtime where each bundle (JAR) has its own classloader and explicitly declares what it exports and imports. You'd consider it in a narrow set of scenarios.
+2.It is used for Long-running platform applications where you need hot-deploy of individual modules without restarting the JVM 
+3.Plugin-based architectures where third parties write extensions that get loaded at runtime  like an enterprise integration platform where customers drop in custom adapters without rebuilding the host application. 
+4. it is useful when you need strict module isolation.
+5. It helps as a third party when a service needs it, extends with plugins at runtime
+
+when not use OSGi
+-----------------
+1. OSGi adds complexity in bundle lifecycle management, service registry wiring, dependency resolution at runtime, and debugging classloader issues. 
+2. When third-party libraries aren't OSGi-ready 
